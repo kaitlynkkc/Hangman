@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginTop="32sp"
+        android:layout_marginBottom="16sp"
+        android:gravity="center"
+        android:text="Hangman"
+        android:textSize="36sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="32sp">
+
+        <RelativeLayout
+            android:layout_width="168dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_margin="8sp">
+
+            <ImageView
+                android:id="@+id/hangman6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman6t" />
+
+            <ImageView
+                android:id="@+id/hangman5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman5t" />
+
+            <ImageView
+                android:id="@+id/hangman4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman4t" />
+
+            <ImageView
+                android:id="@+id/hangman3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman3t" />
+
+            <ImageView
+                android:id="@+id/hangman2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman2t" />
+
+            <ImageView
+                android:id="@+id/hangman1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/hangman1t" />
+
+            <ImageView
+                android:id="@+id/gallows"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:srcCompat="@drawable/gallowst" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="216dp"
+            android:layout_height="146dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:text="The Word:"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/word"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="16sp"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginBottom="32sp">
+
+        <EditText
+            android:id="@+id/guess"
+            android:layout_width="177dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/guessButton"
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_margin="8sp"
+            android:onClick="guess"
+            android:text="Guess" />
+
+        <Button
+            android:id="@+id/newButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:layout_margin="8sp"
+            android:onClick="newGame"
+            android:text="New" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/guessLabel"
+            android:layout_width="162dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="8sp"
+            android:gravity="center"
+            android:text="You have guessed:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/guessList"
+            android:layout_width="244dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginRight="8sp"
+            android:gravity="center" />
+    </GridLayout>
+
+
+</LinearLayout>
